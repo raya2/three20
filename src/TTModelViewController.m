@@ -291,7 +291,7 @@
 }
 
 - (BOOL)shouldReload {
-  return !_modelError && self.model.isOutdated;
+  return !_modelError && !self.model.isLoading && self.model.isOutdated;
 }
 
 - (BOOL)shouldLoadMore {
